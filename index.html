@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <lable>Name</lable>
+        <input type="text" id="name">
+        <lable>Email:</lable>
+        <input type="text" id="email">
+        <label>Mobile:</label>
+        <input type="text" id="mobile"> <br>
+        <button type="button" id="getInput">Submit</button> <br> <br>
+        <button type="button" onclick="addElementToTop()">Add Element at Top</button> <br> <br>
+        <button type="button" onclick="removeLastElement()">Remove Last Data</button> <br> <br>
+        <button type="button" onclick="removeElementAtIndex()">Remove the Element from Index</button> <br> <br>
+        <button type="button" onclick="addElementAtIndex()"> add Element At Index</button> <br> <br>
+        <button type="button" onclick="parseCSVString()"> Parse String</button><br> <br>
+    </form>
+    <div id="dataView"></div>
+  <script type="module">
+        import {createTableView} from "./createTableView.js";
+        import {getInput} from "./appendData.js";
+        import {addElementToTop} from "./addElementToTop.js";
+        import {removeLastElement} from "./removeLastElement.js";
+        import {removeElementAtIndex} from "./removeElementAtIndex.js";
+        import {addElementAtIndex } from "./addElementAtIndex.js"
+        import {parseCSVString} from "./parseCSVString.js"
+        document.querySelector('#getInput').addEventListener('click', getInput);
+            window.removeLastElement =removeLastElement;
+            window.removeElementAtIndex = removeElementAtIndex;
+            window.addElementToTop = addElementToTop;
+            window.addElementAtIndex =addElementAtIndex;
+            window.parseCSVString = parseCSVString;
+      
+    </script>  
+
+</body>
+</html>
